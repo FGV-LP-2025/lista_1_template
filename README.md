@@ -18,6 +18,8 @@ O projeto deve ser organizado nos seguintes arquivos:
 
 - `contas.csv`: O arquivo que funciona como a base de dados do sistema.
 
+> ⚠️ **Aviso:** Siga exatamente os nomes dos arquivos e funções apresentados neste README, incluindo letras maiúsculas e minúsculas. O não cumprimento dessa regra poderá resultar em penalidade na nota.
+
 ## Descrição Detalhada dos Módulos e Funções
 
 ### Arquivo: `contas.csv`
