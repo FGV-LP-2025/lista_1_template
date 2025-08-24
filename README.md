@@ -2,7 +2,7 @@
 
 **Objetivo Geral:** Desenvolver um pequeno projeto com uma interface em terminal (CLI) que simula um sistema de gerenciamento bancário. O programa deverá permitir que o usuário interaja por terminal para realizar as operações descritas abaixo. Os dados das contas deverão ser armazenados em um arquivo CSV, que será alterado pelo programa sempre que novas alterações aos dados bancários sejam feitas ou caso seja necessário buscar informações sobre as contas.
 
-**Prazo:** 29/08
+**Prazo:** 31/08
 
 **Forma de entrega:** Repositório no GitHub Classroom.
 
@@ -54,8 +54,8 @@ salvar_contas_para_csv(caminho_arquivo: str, contas: dict) -> None:
 
 Este módulo deve conter as funções principais relacionadas às operações bancárias. É importante destacar que você pode criar funções auxiliares para facilitar a implementação e manter o código organizado. Lembre-se de seguir o princípio de responsabilidade única, garantindo que cada função tenha um propósito claro e específico, tornando-a mais reutilizável.
 
-Recomendamos que o carregamento e salvamento do arquivo CSV sejam gerenciados internamente pelas funções, sem a necessidade de passar o dicionário de contas como argumento. Para isso, vocês devem usar as funções do módulo `banco_de_dados.py`.
-
+O carregamento e salvamento do arquivo CSV devem gerenciados internamente pelas funções, sem a necessidade de passar o dicionário de contas como argumento. Para isso, vocês devem usar as funções do módulo `banco_de_dados.py` para ler e salvar o CSV ao realizar as operações.
+ 
 ```py
 criar_conta(numero_conta: str, nome_cliente: str) -> tuple[int, dict]:
 ```
@@ -141,7 +141,8 @@ Escolha uma operação:
 2 - Identificar cliente mais rico
 3 - Adicionar fundos em lote
 4 - Debitar fundos em lote
-5 - Voltar ao menu principal
+5 - Abrir uma nova conta no banco
+6 - Voltar ao menu principal
 ```
 
 #### Operações de Cliente
@@ -179,8 +180,10 @@ Certifique-se de validar as entradas do usuário antes de prosseguir com as oper
 
 Ao escolher 3, o programa encerra.
 
+
+
 ## Documentação
 
-O projeto deverá documentado adequadamente, seguindo as práticas ensinadas em aula. Tanto os módulos quanto as funções devem conter docstrings ([aula sobre docstring](https://github.com/matwerner/fgv-lp/blob/0bb5a6549623de7ece087a1d8f0e0ffab1809596/2024_2/aulas/Semana%203%20-%20Documentacao%20%26%20Type%20Hint/10_documentacao.md)) que expliquem seus funcionamentos e comportamentos. 
+O projeto deverá documentado adequadamente, seguindo as práticas ensinadas em aula. Tanto os módulos quanto as funções devem ser documentados com docstrings ([aula sobre documentação e docstrings](https://github.com/matwerner/fgv-lp/blob/0bb5a6549623de7ece087a1d8f0e0ffab1809596/2025_2/aulas/Semana%203%20-%20Documentacao%20%26%20Type%20Hint/10_documentacao.md)) que expliquem seus funcionamentos e comportamentos. 
 
 O projeto deverá ser acompanhado de uma página de documentação, feita em `sphinx` ([aula sobre sphinx](https://github.com/matwerner/fgv-lp/blob/0bb5a6549623de7ece087a1d8f0e0ffab1809596/2024_2/aulas/Semana%205%20-%20Sphinx%20%26%20Programa%C3%A7%C3%A3o%20Funcional/18_documentacao_projeto.md)), e os arquivos relacionados à essa página devem estar própriamente organizados dentro de uma pasta `docs`. Essa página deverá estar disponível por meio do **GitHub Pages**.
